@@ -3,7 +3,7 @@
  * @param {string} b
  * @return {string}
  */
-function addBinary(a, b) {
+var addBinary = function (a, b) {
   let i, j;
   let str = "";
   let carry = false;
@@ -23,41 +23,41 @@ function addBinary(a, b) {
     if (j >= 0) {
       if (a[i] == "1" && b[j] == "1") {
         if (carry) {
-          str = str.concat("1");
+          str = "1" + str;
         } else {
-          str = str.concat("0");
+          str = "0" + str;
         }
         carry = true;
       } else if (a[i] == "0" && b[j] == "0") {
         if (carry) {
-          str = str.concat("1");
+          str = "1" + str;
         } else {
-          str = str.concat("0");
+          str = "0" + str;
         }
         carry = false;
       } else {
         if (carry) {
-          str = str.concat("0");
+          str = "0" + str;
           carry = true;
         } else {
-          str = str.concat("1");
+          str = "1" + str;
           carry = false;
         }
       }
     } else {
       if (a[i] == "1") {
         if (carry) {
-          str = str.concat("0");
+          str = "0" + str;
           carry = true;
         } else {
-          str = str.concat("1");
+          str = "1" + str;
           carry = false;
         }
       } else {
         if (carry) {
-          str = str.concat("1");
+          str = "1" + str;
         } else {
-          str = str.concat("0");
+          str = "0" + str;
         }
         carry = false;
       }
@@ -65,10 +65,9 @@ function addBinary(a, b) {
     j--;
   }
   if (carry) {
-    str = str.concat("1");
+    str = "1" + str;
   }
-  // reverse the string
-  return str.split("").reverse().join("");
-}
+  return str;
+};
 
 module.exports = addBinary;
