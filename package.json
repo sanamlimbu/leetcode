@@ -1,0 +1,22 @@
+{
+  "name": "leetcode",
+  "version": "1.0.0",
+  "description": "Leetcode popular questions and its solutions.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sanamlimbu/leetcode.git"
+  },
+  "author": "Sanam Limbu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sanamlimbu/leetcode/issues"
+  },
+  "homepage": "https://github.com/sanamlimbu/leetcode#readme",
+  "devDependencies": {
+    "jest": "^29.3.1"
+  }
+}
